@@ -5,19 +5,11 @@ void FuckMaple()
 {
 	Log(__FUNCTION__);
 
-	{	//NGS Removal
-		PatchRetZero(0x01960B00);
-	}
+	//NGS Removal
+	PatchRetZero(0x01E5B860);
 
-	{	//MSCRC Bypass
-		PatchJmp(0x019DD7AD, 0x019DD844);
-	}
-
-	{	//Logo Skipper
-		//PatchNop(0x00B31AE6, 2);
-		//PatchNop(0x00B31AEA, 2);
-		//PatchNop(0x00B31AF7, 2);
-	}
+	//MSCRC Bypass
+	PatchJmp(0x1EDBAB9, 0x1EDBB50);
 }
 
 bool Hook_WriteStageLogA(bool bEnable)
